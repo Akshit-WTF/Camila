@@ -4,12 +4,17 @@ exports.run = async (client, message, args) => {
     const ownerUsername = message.guild.members.get(message.guild.owner.id).user.username;
     const ownerDiscrim = message.guild.members.get(message.guild.owner.id).user.discriminator;
 
+    const options = {
+        timeZone: "America/New_York",
+        hour12: true
+    }
+    
     const embed = new Discord.RichEmbed()
     embed.setTitle("Server Information");
     embed.setColor("BLACK");
     embed.setThumbnail(message.guild.iconURL);
     embed.addField("Server Owner", `${ownerUsername}#${ownerDiscrim}`);
-    embed.addField("Created", `${message.guild.createdAt.toLocaleString("en-US")}`);
+    embed.addField("Created", `${message.guild.createdAt.toLocaleString("en-US", options)}`);
     embed.addField("Roles", `${message.guild.roles.size}`);
     embed.addField("Emojis", `${member.guild.emojis.size}`);
     embed.addField("Members", `${message.guild.memberCount}`);
