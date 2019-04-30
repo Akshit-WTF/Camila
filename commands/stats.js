@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const { version } = require("discord.js");
 
-module.exports = async (client, message, args) => {
+exports.run = async (client, message, args) => {
     const embed = new Discord.RichEmbed()
     embed.addField("Memory Usage", `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`);
     embed.addField("Bot Version", `${client.instance.version}`);
