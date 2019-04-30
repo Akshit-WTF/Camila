@@ -7,4 +7,9 @@ module.exports = async (client, guild) => {
     embed.addField("Guild Name", `${guild.name} (${guild.id})`);
     embed.setColor("RED");
     client.channels.get("571890862074626078").send({ embed: embed });
+  
+    client.user.setPresence(`${client.users.size} Users`, {
+        type: "WATCHING",
+        status: "dnd"
+    });
 };
