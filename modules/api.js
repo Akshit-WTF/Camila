@@ -3,3 +3,5 @@ const api = {
     device: "Camila",
     version: "1.0.0"
 };
+
+module.exports = api;
