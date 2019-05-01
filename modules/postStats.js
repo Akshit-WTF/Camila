@@ -5,5 +5,5 @@ module.exports = async (client) => {
     api.postStats(client.guilds.size, client.user.id);
     setInterval(() => {
         api.postStats(client.guilds.size, client.user.id);
-    }, 1000);
+    }, 10000);
 };
