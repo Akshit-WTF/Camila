@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
     function checkMembers(guild) {
         let memberCount = 0;
         guild.members.forEach(member => {
-            if (!member.user.bot) memberCount++;
+            if (member.user.bot) memberCount++;
         });
 
         return memberCount;
