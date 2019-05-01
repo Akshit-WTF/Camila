@@ -20,7 +20,7 @@ fs.readdir("./events/", (err, files) => {
     files.forEach(file => {
         const event = require(`./events/${file}`);
         const eventName = file.split(".")[0];
-        client.config(eventName, event.bind(null, client));
+        client.on(eventName, event.bind(null, client));
     });
 });
 
