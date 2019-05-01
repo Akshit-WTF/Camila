@@ -11,6 +11,7 @@ const client = new Discord.Client({
 client.config = require("./config.js");
 client.instance = require("./package.json");
 client.api = require("./modules/api.js");
+client.commands = new Enmap();
 
 require("./modules/postStats.js");
 
@@ -22,8 +23,6 @@ fs.readdir("./events/", (err, files) => {
         client.config(eventName, event.bind(null, client));
     });
 });
-
-client.commands = new Enmap();
 
 fs.readdir("./commands/", (err, files) => {
     if (err) return undefined;
