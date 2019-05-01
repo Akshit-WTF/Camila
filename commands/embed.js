@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 
 exports.run = async (client, message, args) => {
+    message.delete();
+    
     const dataEmbed = args.join(" ");
     if (!dataEmbed) return message.channel.send("Please supply text in which you'd like me to embed.");
 
