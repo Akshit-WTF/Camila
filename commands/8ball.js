@@ -1,5 +1,3 @@
-const Discord = require("discord.js");
-
 exports.run = async (client, message, args) => {
     const replies = [
         "It is certain.", "It is decidedly so.", "Without a doubt.",
