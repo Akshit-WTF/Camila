@@ -18,8 +18,7 @@
       "os": "^0.1.1",
       "fs-nextra": "^0.4.4",
       "boats.js": "^2.2.0",
-      "snekfetch": "^4.0.4",
-      "weather-js": "^2.0.0"
+      "snekfetch": "^4.0.4"
     },
     "license": "MIT"
 }
