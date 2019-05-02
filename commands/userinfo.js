@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
     embed.addField("Nickname", `${member.nickname !== null ? `${member.nickname}` : "**None**"}`);
     embed.addField("Bot", `${bot}`);
     embed.addField("Status", `${status[member.user.presence.status]}`);
-    embed.addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "**None**"}`);
+    embed.addField("Playing", `${member.user.presence.game ? `${member.user.presence.game.name}` : "**Nothing**"}`);
     embed.addField("Joined Server", `${member.joinedAt.toLocaleString("en-US", options)}`);
     embed.addField("Created Account", `${member.user.createdAt.toLocaleString("en-US", options)}`);
     embed.setColor("BLACK");
