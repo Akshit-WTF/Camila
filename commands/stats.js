@@ -7,6 +7,7 @@ exports.run = async (client, message, args) => {
     embed.addField("Bot Version", `${client.instance.version}`);
     embed.addField("Bot API", `${client.api.version}`);
     embed.addField("Bot Library", `${version}`);
+    embed.addField("Commands", `${client.commands.size}`);
     embed.addField("Guilds", `${client.guilds.size.toLocaleString()}`);
     embed.addField("Channels", `${client.channels.size.toLocaleString()}`);
     embed.addField("Users", `${client.users.size.toLocaleString()}`);
