@@ -1,7 +1,7 @@
 module.exports = async (client, member) => {
-    client.user.setPresence(`${client.users.size} Users`, {
-        type: "WATCHING",
-        status: "dnd"
+    client.user.setStatus("dnd");
+    client.user.setActivity(`${client.users.size} Users`, {
+        type: "WATCHING"
     });
 
     const channel = member.guild.channels.find(ch => ch.name === "meet-and-greet");

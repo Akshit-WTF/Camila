@@ -8,8 +8,8 @@ module.exports = async (client, guild) => {
     embed.setColor("GREEN");
     client.channels.get("571890862074626078").send({ embed: embed });
     
-    client.user.setPresence(`${client.users.size} Users`, {
-        type: "WATCHING",
-        status: "dnd"
+    client.user.setStatus("dnd");
+    client.user.setActivity(`${client.users.size} Users`, {
+        type: "WATCHING"
     });
 };
