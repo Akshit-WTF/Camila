@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
     embed.addField("Server Owner", `${ownerUsername}#${ownerDiscrim}`);
     embed.addField("Created", `${message.guild.createdAt.toLocaleString("en-US", options)}`);
     embed.addField("Roles", `${message.guild.roles.size}`);
-    embed.addField("Emojis", `${member.guild.emojis.size}`);
+    embed.addField("Emojis", `${message.guild.emojis.size}`);
     embed.addField("Members", `${message.guild.memberCount}`);
     
     if (message.guild.verificationLevel === 0) {
