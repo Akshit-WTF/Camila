@@ -8,5 +8,5 @@ exports.run = async (client, message, args) => {
     embed.addField("API Latency", `${Math.round(client.ping)} milliseconds`);
     embed.addField("Shard Latency", `${Math.round(client.ping)} milliseconds`);
     embed.setColor("BLACK");
-    msg.channel.send({ embed: embed });
+    msg.edit({ embed: embed });
 };
