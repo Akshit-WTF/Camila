@@ -12,6 +12,7 @@ exports.run = async (client, message, args) => {
     embed.addField("Guilds", `${client.guilds.size.toLocaleString()}`);
     embed.addField("Channels", `${client.channels.size.toLocaleString()}`);
     embed.addField("Users", `${client.users.size.toLocaleString()}`);
+    embed.addField("Birthday", `${client.api.birthday}`);
     embed.setColor("BLACK");
     message.channel.send({ embed: embed });
 };
