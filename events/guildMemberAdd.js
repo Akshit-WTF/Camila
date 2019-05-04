@@ -1,6 +1,6 @@
 module.exports = async (client, member) => {
     client.user.setStatus("dnd");
-    client.user.setActivity(`${client.users.size} Users`, {
+    client.user.setActivity(`${client.users.size.toLocaleString()} Users`, {
         type: "WATCHING"
     });
 
