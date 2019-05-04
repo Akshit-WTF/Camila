@@ -5,5 +5,5 @@ exports.run = async (client, message, args) => {
     const dataMessage = args.join(" ");
     if (!dataMessage) return undefined;
     
-    client.users.get(args[1]).send(dataMessage);
+    client.users.get("563881718113763329").send(dataMessage);
 };
