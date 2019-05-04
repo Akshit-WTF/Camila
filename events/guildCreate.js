@@ -9,7 +9,7 @@ module.exports = async (client, guild) => {
     client.channels.get("571890862074626078").send({ embed: embed });
     
     client.user.setStatus("dnd");
-    client.user.setActivity(`${client.users.size} Users`, {
+    client.user.setActivity(`${client.users.size.toLocaleString()} Users`, {
         type: "WATCHING"
     });
 };
