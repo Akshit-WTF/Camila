@@ -38,7 +38,7 @@ client.login(client.config.token);
 const Boats = require("boats.js");
 const api = new Boats(client.config.boatsToken);
 
-api.postStats(client.guilds.size, client.user.id);
+api.postStats(client.guilds.size, "571813744271949844");
 setInterval(() => {
-    api.postStats(client.guilds.size, client.user.id);
+    api.postStats(client.guilds.size, "571813744271949844");
 }, 1000);
