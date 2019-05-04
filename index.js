@@ -12,8 +12,7 @@ client.config = require("./config.js");
 client.instance = require("./package.json");
 client.api = require("./modules/api.js");
 client.commands = new Enmap();
-
-require("./modules/postStats.js");
+client.queue = new Enmap();
 
 fs.readdir("./events/", (err, files) => {
     if (err) return undefined;
